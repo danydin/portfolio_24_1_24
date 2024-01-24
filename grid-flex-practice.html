@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    border: 2px solid #333;
+  }
+  
+  .flex-item {
+    flex-grow: 1; /* Flex item will grow if there is extra space */
+    flex-shrink: 1; /* Flex item will shrink if there is not enough space */
+    flex-basis: 20px; /* Initial size of the flex item */
+
+    background-color: lightblue;
+    margin: 5px;
+}
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+      grid-template-areas:
+  'header header header'
+  'sidebar main main'
+  'footer footer footer';
+      grid-template-rows: 100px 200px 100px; /* no effect why ask gpt */
+      grid-gap: 10px; /* Gap between grid items */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      height: 300px;
+      border: 2px solid #333;
+       /*Specifies the size of the gap between columns and rows. */
+       grid-column-gap: 100px;
+        grid-row-gap: 200px;
+
+        /* Sets the size for columns and rows that are created implicitly (not defined in the grid-template). */
+
+grid-auto-columns: 100px;
+grid-auto-rows: 50px;
+
+/* Determines the direction in which the auto-placed items are added (row, column, or dense). */
+
+grid-auto-flow: row;
+
+/* Shorthand properties for aligning items and content in the grid. */
+
+place-items: center;
+place-content: space-between stretch;
+
+    }
+
+    .grid-item {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+
+
+      /* Specifies the placement of an item within the grid. */
+
+grid-column: 1 / 3; /* Starts at column line 1 and ends at column line 3 */
+grid-row: 1 / span 3; /* Starts at row line 1 and spans 3 rows */
+
+
+    }
+
+    </style>
+</head>
+<body>
+    
+    <!-- the flex basis will not be included in the calculation of the growth and shrink and will stay as the base for the calculation to start from -  align-self overrites align-items:center; for the third div below */  -->
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item" style="flex-grow: 2;">2 (flex-grow: 2)</div>
+        <div class="flex-item" style="flex-basis: 100px; align-self: stretch;">3 (flex-basis: 100px)</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+
+</body>
+</html>
