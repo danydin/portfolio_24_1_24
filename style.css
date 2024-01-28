@@ -114,7 +114,7 @@ nav .nav-links a.selected{
 }
 
 .recent .header h4,
-.separator h4{
+.projects .projects-title h4{
     font-size: 20px;
     font-weight: 400;
 }
@@ -155,19 +155,15 @@ nav .nav-links a.selected{
     width: 400px;
 }
 
-.separator{
+.projects .projects-title{
     padding: 40px 148px 0;
 }
 
-.separator h4{
-    margin-bottom: 30px;
-}
-
-.featured{
+.projects .featured{
     padding: 40px 290px 0;
 }
 
-.featured .item{
+.projects .featured .item{
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
@@ -175,25 +171,25 @@ nav .nav-links a.selected{
     border-bottom: 2px solid #e0e0e0;
 }
 
-.featured .item img{
+.projects .featured .item img{
     width: 320px;
     height: 200px;
     border-radius: 6px;
 }
 
-.featured .item .details h3{
+.projects .featured .item .details h3{
     font-size: 30px;
     margin-bottom: 16px;
 }
 
-.featured .item .details .item-info{
+.projects .featured .item .details .item-info{
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.featured .item .details .item-info .year-badge{
+.projects .featured .item .details .item-info .year-badge{
     background-color: #303f9f;
     padding: 2px 14px;
     color: #fff;
@@ -202,12 +198,12 @@ nav .nav-links a.selected{
     font-weight: bold;
 }
 
-.featured .item .details .item-info h4{
+.projects .featured .item .details .item-info h4{
     color: #8695a4;
     font-size: 18px;
 }
 
-.featured .item .details p{
+.projects .featured .item .details p{
     width: 700px;
     text-align: justify;
 }
@@ -238,4 +234,24 @@ footer .socials i:hover{
 
 footer p{
     font-size: 14px;
+}
+
+.page-title{
+    padding: 80px 234px 20px;
+    width: 100%;
+}
+
+.content{
+    padding: 30px 148px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .works-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 970px;
 }
